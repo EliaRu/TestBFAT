@@ -632,6 +632,7 @@ public:
             cout << "Received " << received << " window results, "
             << "final result: " << res.value << endl;
         }
+
 /*
     void operator( )( std::experimental::optional<tuple_t> &pout ) {
         if( pout ) {

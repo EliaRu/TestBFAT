@@ -18,7 +18,7 @@ NOPTFLAGS	=  -Xptxas -O3,-v --default-stream per-thread
 NLDFLAGS      	= 
 OPT_LEVEL	=  -O3 -DFF_BOUNDED_BUFFER
 
-TARGETS = test_inc test_fat test_bfat
+TARGETS = test_inc test_fat test_bfat test_gen
 
 all: $(TARGETS)
 
@@ -26,6 +26,9 @@ test_inc: test_inc.cpp
 	$(CC) $(CFLAGS) $(INC) -o $@ $^ $(LIBS)
 
 test_fat: test_fat.cpp
+	$(CC) $(CFLAGS) $(INC) -o $@ $^ $(LIBS)
+
+test_gen: test_gen.cpp
 	$(CC) $(CFLAGS) $(INC) -o $@ $^ $(LIBS)
 
 test_bfat: test_bfat.cpp
